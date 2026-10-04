@@ -1,5 +1,8 @@
 require("dotenv").config();
 
+// Initialize database schema
+require("./database/init");
+
 const app = require("./src/app");
 
 const PORT = process.env.PORT || 5000;
