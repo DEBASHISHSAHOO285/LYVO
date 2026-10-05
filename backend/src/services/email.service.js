@@ -3,7 +3,6 @@ const dns = require("dns");
 dns.setDefaultResultOrder("ipv4first");
 
 const nodemailer = require("nodemailer");
-const nodemailer = require("nodemailer");
 
 const smtpUser = process.env.SMTP_USER;
 const smtpPass = process.env.SMTP_PASS;
