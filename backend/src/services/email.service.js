@@ -11,10 +11,15 @@ if (!smtpUser || !smtpPass) {
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
+
   auth: {
     user: smtpUser,
     pass: smtpPass,
   },
+
+  connectionTimeout: 10000,
+  greetingTimeout: 10000,
+  socketTimeout: 15000,
 });
 
 const sendPasswordResetOTP = async ({
