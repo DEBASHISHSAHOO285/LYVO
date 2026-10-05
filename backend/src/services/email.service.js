@@ -10,12 +10,17 @@ if (!smtpUser || !smtpPass) {
 }
 
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",
+  port: 587,
+  secure: false,
+  requireTLS: true,
 
   auth: {
     user: smtpUser,
     pass: smtpPass,
   },
+
+  family: 4,
 
   connectionTimeout: 10000,
   greetingTimeout: 10000,
